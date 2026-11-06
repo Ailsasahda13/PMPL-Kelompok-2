@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>SIB Quality Assurance Lab</h1>
-<p><span class="badge" id="team-label">Kelompok: GANTI_DENGAN_NOMOR_KELOMPOK</span> | Latihan lokal PMPL</p>
+<p><span class="badge" id="team-label">Kelompok: K02 </span> | Latihan lokal PMPL</p>
 @if(session('message')) <div class="notice" role="status">{{ session('message') }}</div> @endif
 @if(session('error')) <div class="notice error" role="alert">{{ session('error') }}</div> @endif
 @if($errors->any()) <div class="notice error" role="alert">{{ $errors->first() }}</div> @endif
