@@ -10,11 +10,10 @@ class Anggota5Test extends DuskTestCase
     public function test_anggota_5(): void
     {
         // P9: Checkout kosong
-        $this->markTestIncomplete('Lengkapi aksi dan assertion TC09-05, lalu hapus baris ini.');
         $this->browse(function (Browser $browser) {
-            $browser->visit('/qa/reset');
-            // TODO: Langsung klik Checkout Sekarang, pastikan pesan Keranjang kosong.
-            // Di sini: $browser->... ; (beri titik koma pada akhir rantai)
+            $browser->visit('/qa/reset')
+                    ->press('Checkout Sekarang')
+                    ->assertSee('Keranjang kosong');
         });
     }
 }
