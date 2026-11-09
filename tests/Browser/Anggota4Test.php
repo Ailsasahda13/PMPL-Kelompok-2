@@ -9,12 +9,12 @@ class Anggota4Test extends DuskTestCase
 {
     public function test_anggota_4(): void
     {
-        // P9: Jumlah nol ditolak
-        $this->markTestIncomplete('Lengkapi aksi dan assertion TC09-04, lalu hapus baris ini.');
         $this->browse(function (Browser $browser) {
-            $browser->visit('/qa/reset');
-            // TODO: Isi #qty_kopi dengan 0, klik Tambah Kopi, pastikan pesan validasi.
-            // Di sini: $browser->... ; (beri titik koma pada akhir rantai)
+        $browser->visit('/qa/reset')
+                ->type('#qty_kopi', '0')
+                ->press('Tambah Kopi')
+                ->assertSee('Jumlah minimal 1')
+                ->assertSee('Subtotal: Rp 0');
         });
     }
 }
